@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection settings -->
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL82Dialect</property>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">apside</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://127.0.0.1:5432/postgres</property>
+        <!-- JDBC connection pool (use the built-in) -->
+        <property name="connection.pool_size">1</property>
+        <!-- Disable the second-level cache  -->
+        <property name="cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>
+        <!-- Log SQL queries -->
+        <property name="format_sql">true</property>
+        <property name="use_sql_comments">true</property>
+        <!-- MAPPINGS -->
+        <mapping class="fr.apside.entretien.hibernate.domaine.Country"/>
+    </session-factory>
+</hibernate-configuration>
